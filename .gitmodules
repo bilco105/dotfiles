@@ -1,0 +1,9 @@
+[submodule "lib/zsh/pure"]
+	path = lib/zsh/pure
+	url = git://github.com/sindresorhus/pure.git
+[submodule "lib/zsh/zsh-syntax-highlighting"]
+	path = lib/zsh/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "lib/zsh/z"]
+	path = lib/zsh/z
+	url = git@github.com:rupa/z.git
