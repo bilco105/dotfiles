@@ -17,6 +17,9 @@ Plug 'itchyny/lightline.vim'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" CTags
+Plug 'preservim/tagbar'
+
 " Native LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'

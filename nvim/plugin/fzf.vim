@@ -35,4 +35,5 @@ let g:fzf_colors =
 " Key mappings
 nnoremap <silent> <C-f> :Files <CR>
 nnoremap <silent> <C-b> :Buffers <CR>
+nnoremap <silent> <C-t> :Tags <CR>
 nnoremap <silent> <C-s> :Rg <CR>
