@@ -12,15 +12,15 @@ alias v=${EDITOR}
 alias vi=${EDITOR}
 alias vim=${EDITOR}
 
-# Tmux
-alias t=tmux
-alias mux=tmuxinator
-
 # Aliases
-alias ls='ls -lhGH' 
+alias ls='ls -lhGH'
 alias pwplz='pwgen -n -y -s 12 1'
 alias keyplz='openssl rand -hex 10'
-alias uuidgen="uuidgen | tr 'A-Z' 'a-z'"
+alias uuidplz="uuidgen | tr 'A-Z' 'a-z'"
+
+# Bat
+export BAT_THEME='Nord'
+alias cat='bat'
 
 # History
 HISTFILE=~/.history
@@ -56,6 +56,9 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-pattern-search-backward
 export KEYTIMEOUT=1
+
+# Theme
+PROMPT_LEAN_TMUX=""
 
 # Plugins
 zinit light "miekg/lean"

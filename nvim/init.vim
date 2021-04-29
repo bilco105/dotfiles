@@ -2,33 +2,40 @@
 " ==============================================
 call plug#begin()
 
+" Comments
+Plug 'tpope/vim-commentary'
 
 " Git
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'tpope/vim-fugitive'
 
 " Fuzzy Finder
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+" Languages
+Plug 'hashivim/vim-terraform'
+
 " Lightline
 Plug 'itchyny/lightline.vim'
-
-" Treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" CTags
-Plug 'preservim/tagbar'
 
 " Native LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 
+" Tags
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'preservim/tagbar'
+
 " Theme
 Plug 'arcticicestudio/nord-vim'
 
-" Languages
-Plug 'hashivim/vim-terraform'
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end() 
 
@@ -82,6 +89,13 @@ set smartcase
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
+
+" Keymaps
+" ==============================================
+
+" Better indenting behaviour
+vnoremap < <gv
+vnoremap > >gv
 
 " Plugin configurations 
 " ==============================================

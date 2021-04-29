@@ -1,10 +1,11 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap "homebrew/cask"
+tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
-tap "homebrew/cask-fonts"
+tap 'homebrew/cask-fonts'
 tap 'hashicorp/tap'
+tap 'universal-ctags/universal-ctags'
 tap 'warrensbox/tap'
 
 brew 'awscli'
@@ -12,6 +13,7 @@ brew 'bat'
 brew 'git'
 brew 'fzf'
 brew 'kubernetes-cli'
+brew 'kubie'
 brew 'lua'
 brew 'mas'
 brew 'neovim', args: ['HEAD']
@@ -19,6 +21,8 @@ brew 'ripgrep'
 brew 'terraform-ls'
 brew 'tflint'
 brew 'tfswitch'
+brew 'tmux'
+brew 'universal-ctags'
 
 cask 'aerial'
 cask 'alfred'
