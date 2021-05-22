@@ -13,6 +13,7 @@ alias vi=${EDITOR}
 alias vim=${EDITOR}
 
 # Aliases
+alias k='kubectl'
 alias ls='ls -lhGH'
 alias pwplz='pwgen -n -y -s 12 1'
 alias keyplz='openssl rand -hex 10'

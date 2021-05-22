@@ -5,14 +5,15 @@ call plug#begin()
 " Comments
 Plug 'tpope/vim-commentary'
 
-" Git
+" Fuzzy Finder
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+" Git
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
-
-" Fuzzy Finder
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
 
 " Languages
 Plug 'hashivim/vim-terraform'
@@ -31,9 +32,6 @@ Plug 'preservim/tagbar'
 " Theme
 Plug 'arcticicestudio/nord-vim'
 
-" Tmux
-Plug 'christoomey/vim-tmux-navigator'
-
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -48,6 +46,7 @@ set number
 set relativenumber
 set signcolumn=yes
 set cursorline
+set colorcolumn=80
 set scrolloff=10
 set updatetime=300
 set wildmode=longest,list,full
