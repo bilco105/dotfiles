@@ -24,16 +24,15 @@ Plug 'itchyny/lightline.vim'
 " Native LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
-
-" Tags
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'preservim/tagbar'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'simrat39/symbols-outline.nvim'
 
 " Theme
 Plug 'arcticicestudio/nord-vim'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 call plug#end() 
 
@@ -42,9 +41,6 @@ call plug#end()
 let mapleader=' '
 set hidden
 set noshowmode
-set number
-set relativenumber
-set signcolumn=yes
 set cursorline
 set colorcolumn=80
 set scrolloff=10
