@@ -42,6 +42,7 @@ let mapleader=' '
 set hidden
 set noshowmode
 set cursorline
+set signcolumn=yes
 set colorcolumn=80
 set scrolloff=10
 set updatetime=300
