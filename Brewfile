@@ -44,7 +44,6 @@ cask 'zoom'
 
 mas '1Password 7', id: 1333542190
 mas 'Fantastical', id: 975937182
-mas 'Jira', id: 1475897096
 mas 'Slack', id: 803453959 
 mas 'The Unarchiver', id: 425424353
 mas 'Things', id: 904280696
