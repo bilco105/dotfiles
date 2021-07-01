@@ -1,2 +1,6 @@
+require('bilco105.compe')
 require('bilco105.gitsigns')
+require('bilco105.lightline')
 require('bilco105.lsp')
+require('bilco105.telescope')
+require('bilco105.treesitter')
