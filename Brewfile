@@ -18,7 +18,6 @@ brew 'lua'
 brew 'mas'
 brew 'neovim', args: ['HEAD']
 brew 'ripgrep'
-brew 'terraform-ls'
 brew 'tfswitch'
 brew 'tmux'
 brew 'zinit'

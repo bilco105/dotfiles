@@ -2,8 +2,12 @@
 " ==============================================
 call plug#begin()
 
-" Comments
+" Helpful Utilities
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/vim-easy-align'
+Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
 
 " Fuzzy Finder
 Plug 'nvim-lua/popup.nvim'
@@ -24,6 +28,7 @@ Plug 'itchyny/lightline.vim'
 " Native LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/vim-vsnip'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
@@ -47,6 +52,8 @@ set colorcolumn=80
 set scrolloff=10
 set updatetime=300
 set wildmode=longest,list,full
+set shortmess+=c
+set completeopt=menuone,noselect
 
 " Splits
 " ==============================================
@@ -92,6 +99,17 @@ let g:netrw_winsize = 25
 " Better indenting behaviour
 vnoremap < <gv
 vnoremap > >gv
+
+" Aligning 
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" Completion
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " Plugin configurations 
 " ==============================================
