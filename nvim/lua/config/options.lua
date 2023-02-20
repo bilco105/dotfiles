@@ -3,10 +3,12 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
+opt.clipboard = "unnamedplus" -- Sync clipboard with OS
 opt.completeopt = "menu,menuone,noselect" -- Better completion experience
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Highlight the current line
 opt.expandtab = true -- Use spaces instead of tabs
+opt.hlsearch = false -- Don't continue highlighting search
 opt.ignorecase = true -- Ignore case
 opt.mouse = "a" -- Enable mouse mode
 opt.relativenumber = true -- Use relative line numbers for inactive lines
@@ -14,6 +16,7 @@ opt.number = true -- Show absolute line number for active line
 opt.scrolloff = 4 -- Lines of context
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 2 -- Size of an indent
+opt.shortmess:append { W = true, I = true, c = true } -- Avoid hit-enter prompts
 opt.showmode = false -- Don't show mode since we have a status line
 opt.sidescrolloff = 8 -- Columns of context
 opt.signcolumn = "yes" -- Always show the signcolumn
@@ -24,4 +27,5 @@ opt.tabstop = 2 -- Number of spaces tab counts for
 opt.termguicolors = true -- True colour support
 opt.undofile = true -- Enable the undofile
 opt.updatetime = 200 -- Speed up key timeouts
+opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.wrap = false -- Disable line wrap
