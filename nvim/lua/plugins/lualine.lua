@@ -34,14 +34,6 @@ return {
               padding = { left = 1, right = 0 },
             },
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
-            {
-              function()
-                return require("nvim-navic").get_location()
-              end,
-              cond = function()
-                return require("nvim-navic").is_available()
-              end,
-            },
           },
           lualine_x = {
             {
@@ -55,7 +47,7 @@ return {
           },
           lualine_y = {},
           lualine_z = {
-            { "progress", separator = " ", padding = { left = 1, right = 0 } },
+            { "progress", separator = " ",                  padding = { left = 1, right = 0 } },
             { "location", padding = { left = 0, right = 1 } },
           },
         },

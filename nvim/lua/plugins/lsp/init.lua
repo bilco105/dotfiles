@@ -2,14 +2,7 @@ return {
   {
     "williamboman/mason.nvim",
     config = true,
-  },
-  {
-    "SmiteshP/nvim-navic",
-    opts = {
-      separator = " ",
-      highlight = true,
-      depth_limit = 5,
-    },
+    command = ":Mason",
   },
   {
     "neovim/nvim-lspconfig",
@@ -42,6 +35,8 @@ return {
         astro = {},
         cssls = {},
         emmet_ls = {},
+        eslint = {},
+        graphql = {},
         html = {},
         jsonls = {},
         lua_ls = {},
@@ -62,6 +57,9 @@ return {
       end
       vim.diagnostic.config(opts.diagnostics)
 
+      -- Formatting
+      require("lsp-format").setup(opts.formatting)
+
       -- LSP Attachment Configuration
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
@@ -70,15 +68,8 @@ return {
 
           require("lsp-format").on_attach(client)
           require("plugins.lsp.keymaps").on_attach(client, buffer)
-
-          if client.server_capabilities.documentSymbolProvider then
-            require("nvim-navic").attach(client, buffer)
-          end
         end,
       })
-
-      -- Formatting
-      require("lsp-format").setup(opts.formatting)
 
       -- Mason
       mason.setup { ensure_installed = vim.tbl_keys(opts.servers) }
@@ -99,24 +90,23 @@ return {
       "nvim-lua/plenary.nvim",
       "jay-babu/mason-null-ls.nvim",
     },
-    opts = {
-      servers = {
-        "black",
-        "eslint",
-        "flake8",
-        "prettier",
-        "stylua",
-      },
-    },
-    config = function(_, opts)
-      local mason = require "mason-null-ls"
+    config = function()
+      local null_ls = require "null-ls"
 
-      mason.setup {
-        ensure_installed = opts.servers,
-        automatic_setup = true,
+      null_ls.setup {
+        sources = {
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.prettierd.with {
+            extra_filetypes = { "astro" },
+          },
+        },
       }
 
-      mason.setup_handlers {}
+      require("mason-null-ls").setup {
+        ensure_installed = nil,
+        automatic_installation = true,
+        automatic_setup = false,
+      }
     end,
   },
   { "j-hui/fidget.nvim", event = { "BufReadPre", "BufNewFile" }, config = true },
