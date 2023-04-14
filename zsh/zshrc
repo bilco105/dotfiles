@@ -1,5 +1,6 @@
 # Path
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 # Plugin Manager
 source /opt/homebrew/opt/zinit/zinit.zsh
