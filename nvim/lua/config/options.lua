@@ -3,7 +3,6 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
-opt.clipboard = "unnamedplus" -- Sync clipboard with OS
 opt.completeopt = "menu,menuone,noselect" -- Better completion experience
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true -- Highlight the current line
