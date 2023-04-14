@@ -12,6 +12,7 @@ return {
         "css",
         "dockerfile",
         "go",
+        "graphql",
         "hcl",
         "html",
         "javascript",
@@ -23,6 +24,7 @@ return {
         "regex",
         "tsx",
         "typescript",
+        "vimdoc",
         "yaml",
       },
       incremental_selection = {
